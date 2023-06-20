@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { CryptoState } from "../context/CryptoContext";
 
 const Header = () => {
   const darkTheme = createTheme({
@@ -17,6 +18,8 @@ const Header = () => {
       mode: "dark",
     },
   });
+  const { currency, setCurrency } = CryptoState();
+
   return (
     <ThemeProvider theme={darkTheme}>
       <AppBar color="transparent" position="static">
@@ -42,7 +45,10 @@ const Header = () => {
                 height: 40,
                 marginRight: 15,
               }}
-              value="INR"
+              value={currency}
+              onChange={(e) => {
+                setCurrency(e.target.value);
+              }}
             >
               <MenuItem value={"USD"}>USD $</MenuItem>
               <MenuItem value={"INR"}>INR ₹</MenuItem>
