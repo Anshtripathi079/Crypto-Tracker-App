@@ -23,7 +23,7 @@ a {
   cursor: pointer;
 }
 .banner {
-  background-image: url(../public/images/banner.jpg);
+  background-image: url(./images/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -50,7 +50,11 @@ a {
 .row {
   background-color: #16171a;
   cursor: pointer;
+  font-family: "Poppins";
 }
 .row:hover {
   background-color: #131111;
+}
+.pagination {
+  color: gold;
 }
