@@ -47,3 +47,10 @@ a {
   text-transform: uppercase;
   color: white;
 }
+.row {
+  background-color: #16171a;
+  cursor: pointer;
+}
+.row:hover {
+  background-color: #131111;
+}
