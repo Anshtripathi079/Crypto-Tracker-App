@@ -26,7 +26,7 @@ const Header = () => {
         <Container>
           <Toolbar>
             <Typography
-              variant="h6"
+              variant="h5"
               style={{
                 fontFamily: "Poppins",
                 fontWeight: "bold",
@@ -41,7 +41,7 @@ const Header = () => {
             <Select
               variant="outlined"
               style={{
-                width: 400,
+                width: 100,
                 height: 40,
                 marginRight: 15,
               }}

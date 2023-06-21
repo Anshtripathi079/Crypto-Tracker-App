@@ -44,7 +44,7 @@ const CoinsTable = () => {
     "&:hover": {
       backgroundColor: "#131111",
     },
-    fontFamily: "Montserrat",
+    fontFamily: "Poppins",
   });
 
   const darkTheme = createTheme({
@@ -55,7 +55,9 @@ const CoinsTable = () => {
       type: "dark",
     },
   });
-
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
   const handleChange = () => {
     return coins.filter((coin) => {
       return (
@@ -64,16 +66,11 @@ const CoinsTable = () => {
       );
     });
   };
-  const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Container sx={{ textAlign: "center" }}>
-        <Typography
-          variant="h4"
-          sx={{ margin: "18px", fontFamily: "Montserrat" }}
-        >
+        <Typography variant="h4" sx={{ margin: "18px", fontFamily: "Poppins" }}>
           Cryptocurrency Prices by Market Cap
         </Typography>
         <TextField
@@ -104,7 +101,7 @@ const CoinsTable = () => {
                       style={{
                         color: "black",
                         fontWeight: "700",
-                        fontFamily: "Montserrat",
+                        fontFamily: "Poppins",
                       }}
                       key={head}
                       align={head === "Coin" ? "left" : "right"}
@@ -175,7 +172,6 @@ const CoinsTable = () => {
                           {numberWithCommas(
                             row.market_cap.toString().slice(0, -6)
                           )}
-                          M
                         </TableCell>
                       </StyledTableRow>
                     );

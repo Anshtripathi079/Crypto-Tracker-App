@@ -20,17 +20,17 @@ const Banner = () => {
             style={{
               fontWeight: "bold",
               marginBottom: 15,
-              fontFamily: "Montserrat",
+              fontFamily: "Poppins",
             }}
           >
-            Crypto Tracker
+            <span style={{ color: "gold" }}>Crypto</span> Tracker
           </Typography>
           <Typography
             variant="subtitle2"
             style={{
               color: "darkgrey",
               textTransform: "capitalize",
-              fontFamily: "Montserrat",
+              fontFamily: "Poppins",
             }}
           >
             Get all the Info regarding your favorite Crypto Currency
